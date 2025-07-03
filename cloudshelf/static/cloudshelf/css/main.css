@@ -32,4 +32,5 @@ body {
     width: 100svw;
     min-height: 100svh;
     background-color: var(--light-gray);
+    font-family: var(--font-body);
 }
