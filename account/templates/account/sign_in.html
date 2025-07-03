@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudShelf - Sign In</title>
+    <link rel="stylesheet" href="{% static 'cloudshelf/css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'account/css/sign_in.css' %}">
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="{% static 'account/js/sign_in.js' %}" defer></script>
+</head>
+<body>
+    <div class="form-wrapper">
+        <div class="form-container">
+            <div class="form-title">
+                <h1>Sign In</h1>
+            </div>
+            <div class="form-buttons">
+                <div id="g_id_onload"
+                    data-client_id="684296714229-honu1stfuui5lp9ot7pdm48g2lb0j2df.apps.googleusercontent.com"
+                    data-context="signin"
+                    data-ux_mode="popup"
+                    data-login_uri="http://localhost:8000/account/auth-receiver"
+                    data-itp_support="true"
+                    data-scope="https://www.googleapis.com/auth/drive">
+                </div>
+    
+                <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="outline" data-text="signin_with"
+                    data-size="large" data-locale="en" data-logo_alignment="left">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

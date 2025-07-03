@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'sansita-swashed';
+    src: local('sansita-swashed'), url('../fonts/sansita-swashed.ttf') format("truetype");
+}
+@font-face {
+    font-family: 'ubuntu-regular';
+    src: local('ubuntu-regular'), url('../fonts/ubuntu-regular.ttf') format("truetype");
+}
+
+:root {
+    --white: #ffffff;
+    --light-gray: #D9D9D9;
+    --dark-gray: #222222;
+    --black: #000000;
+    --light-blue: #3F76EB;
+    --light-blue-2: #2F62D1;
+    --dark-blue: #163B8C;
+    --dark-blue-2: #00226C;
+
+    --font-title:'sansita-swashed', sans-serif;
+    --font-body:'ubuntu-regular', sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100svw;
+    min-height: 100svh;
+    background-color: var(--light-gray);
+    font-family: var(--font-body);
+}
