@@ -1,0 +1,11 @@
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100svh;
+    width: 100svw;
+    background-color: var(--dark-blue-2);
+    font-family: var(--font-title);
+    color: var(--white);
+    font-size: 20px;
+}
