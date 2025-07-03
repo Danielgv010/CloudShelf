@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static 'cloudshelf/css/main.css' %}">
     <link rel="stylesheet" href="{% static 'account/css/sign_in.css' %}">
     <script src="https://accounts.google.com/gsi/client" async></script>
-
+    <script src="{% static 'account/js/sign_in.js' %}" defer></script>
 </head>
 <body>
     <div class="form-wrapper">
@@ -19,8 +19,11 @@
             <div class="form-buttons">
                 <div id="g_id_onload"
                     data-client_id="684296714229-honu1stfuui5lp9ot7pdm48g2lb0j2df.apps.googleusercontent.com"
-                    data-context="signin" data-ux_mode="popup" data-login_uri="http://localhost:8000/account/auth-receiver"
-                    data-itp_support="true">
+                    data-context="signin"
+                    data-ux_mode="popup"
+                    data-login_uri="http://localhost:8000/account/auth-receiver"
+                    data-itp_support="true"
+                    data-scope="https://www.googleapis.com/auth/drive">
                 </div>
     
                 <div class="g_id_signin" data-type="standard" data-shape="pill" data-theme="outline" data-text="signin_with"

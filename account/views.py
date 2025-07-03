@@ -1,9 +1,10 @@
 import os
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 from google.oauth2 import id_token
 from google.auth.transport import requests
+import json
 
 @csrf_exempt
 def sign_in(request):
@@ -33,3 +34,12 @@ def auth_receiver(request):
 def sign_out(request):
     del request.session['user_data']
     return redirect('sign_in')
+
+@csrf_exempt
+def store_token(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        access_token = data.get('access_token')
+        request.session['access_token'] = access_token
+        return JsonResponse({'status': 'ok'})
+    return JsonResponse({'error': 'Invalid request'}, status=400)
