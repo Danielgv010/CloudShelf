@@ -7,5 +7,5 @@
 <div class="query-filters hidden"></div>
 <div class="account-actions hidden" id="account-actions">
     <div>{{ request.session.user_data.given_name }}</div>
-    <div data-redirect="{% url 'sign_out' %}" id="account-actions-logout">Logout</div>
+    <div data-redirect="{% url 'sign_out' %}" id="account-actions-logout"><img src="{% static 'cloudshelf/img/logout.svg' %}" alt="Logout">Logout</div>
 </div>
