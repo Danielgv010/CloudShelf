@@ -1,11 +1,14 @@
 {% load static %}
 <div class="navbar-wrapper">
-    <img src="{% static 'cloudshelf/img/menu.svg' %}" alt="Menu" id="menu-icon">
-    <h1><a href="{% url 'home' %}">CloudShelf</a></h1>
-    <img src="{% static 'cloudshelf/img/account.svg' %}" alt="Account" id="account-icon">
+    <div class="navbar">
+        <img src="{% static 'cloudshelf/img/menu.svg' %}" alt="Menu" id="menu-icon">
+        <h1><a href="{% url 'home' %}">CloudShelf</a></h1>
+        <img src="{% static 'cloudshelf/img/account.svg' %}" alt="Account" id="account-icon">
+    </div>
+    <div class="query-filters hidden"></div>
+    <div class="account-actions hidden" id="account-actions">
+        <div>{{ request.session.user_data.given_name }}</div>
+        <div data-redirect="{% url 'sign_out' %}" id="account-actions-logout"><img src="{% static 'cloudshelf/img/logout.svg' %}" alt="Logout">Logout</div>
+    </div>
 </div>
-<div class="query-filters hidden"></div>
-<div class="account-actions hidden" id="account-actions">
-    <div>{{ request.session.user_data.given_name }}</div>
-    <div data-redirect="{% url 'sign_out' %}" id="account-actions-logout"><img src="{% static 'cloudshelf/img/logout.svg' %}" alt="Logout">Logout</div>
-</div>
+<div class="navbar-spacer"></div>
