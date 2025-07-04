@@ -5,7 +5,16 @@
         <h1><a href="{% url 'home' %}">CloudShelf</a></h1>
         <img src="{% static 'cloudshelf/img/account.svg' %}" alt="Account" id="account-icon">
     </div>
-    <div class="query-filters hidden"></div>
+    <div class="query-filters hidden" id="query-filters">
+        <div class="search-field">
+            <input type="text" id="search-input" placeholder="Search...">
+            <img src="{% static 'cloudshelf/img/search.svg' %}" alt="Search" id="search-icon">
+        </div>
+        <p class="tag-title"><img src="{% static 'cloudshelf/img/tag.svg' %}" alt="Tag">Tags</p>
+        <div class="tag-container">
+            <div class="color-4" id="add"><img src="{% static 'cloudshelf/img/add.svg' %}" alt="Add"></div>
+        </div>
+    </div>
     <div class="account-actions hidden" id="account-actions">
         <div>{{ request.session.user_data.given_name }}</div>
         <div data-redirect="{% url 'sign_out' %}" id="account-actions-logout"><img src="{% static 'cloudshelf/img/logout.svg' %}" alt="Logout">Logout</div>
